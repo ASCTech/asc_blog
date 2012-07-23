@@ -1,0 +1,110 @@
+<?php
+/**
+ * @file
+ * asc_blog.features.fe_block_settings.inc
+ */
+
+/**
+ * Implements hook_default_fe_block_settings().
+ */
+function asc_blog_default_fe_block_settings() {
+  $export = array();
+
+  // q7
+  $theme = array();
+
+  $theme['asc_taxonomy_filter-blog_terms_1'] = array(
+    'module' => 'asc_taxonomy_filter',
+    'delta' => 'blog_terms_1',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'sidebar',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'blog*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['asc_taxonomy_filter-blog_terms_2'] = array(
+    'module' => 'asc_taxonomy_filter',
+    'delta' => 'blog_terms_2',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'sidebar',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'blog*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['asc_taxonomy_filter-blog_terms_3'] = array(
+    'module' => 'asc_taxonomy_filter',
+    'delta' => 'blog_terms_3',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'sidebar',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'blog*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['views-asc_blog-blog_block_large'] = array(
+    'module' => 'views',
+    'delta' => 'asc_blog-blog_block_large',
+    'theme' => 'q7',
+    'status' => 0,
+    'weight' => '-12',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => '<front>',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['views-asc_blog-blog_block_list'] = array(
+    'module' => 'views',
+    'delta' => 'asc_blog-blog_block_list',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '-20',
+    'region' => 'sidebar',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'blog/*',
+    'title' => 'Recent Blog',
+    'cache' => -1,
+  );
+
+  $theme['views-asc_blog-blog_block_small'] = array(
+    'module' => 'views',
+    'delta' => 'asc_blog-blog_block_small',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'preface_second',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => '<front>',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $export['q7'] = $theme;
+
+  $theme_default = variable_get('theme_default', 'garland');
+  $themes = list_themes();
+  foreach ($export as $theme_key => $settings) {
+    if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
+      unset($export[$theme_key]);
+    }
+  }
+  return $export;
+}

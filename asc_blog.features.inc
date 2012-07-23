@@ -58,7 +58,7 @@ function asc_blog_image_default_styles() {
 function asc_blog_node_info() {
   $items = array(
     'asc_blog' => array(
-      'name' => t('Blog Story'),
+      'name' => t('Blog Entry'),
       'base' => 'node_content',
       'description' => t('Blog for your organization.'),
       'has_title' => '1',

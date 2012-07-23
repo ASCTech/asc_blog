@@ -63,7 +63,7 @@ function asc_blog_field_default_fields() {
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
-            'trim_length' => '300',
+            'trim_length' => '600',
           ),
           'type' => 'text_summary_or_trimmed',
           'weight' => '1',
@@ -252,10 +252,11 @@ function asc_blog_field_default_fields() {
           'weight' => '4',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -323,9 +324,10 @@ function asc_blog_field_default_fields() {
           'weight' => '5',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
       ),
@@ -394,10 +396,11 @@ function asc_blog_field_default_fields() {
           'weight' => '6',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'hidden',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '2',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -419,11 +422,11 @@ function asc_blog_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
-  t('Image');
   t('Blog Terms 1');
   t('Blog Terms 2');
   t('Blog Terms 3');
+  t('Description');
+  t('Image');
   t('Supply an image to accompany the blog entry.');
 
   return $fields;

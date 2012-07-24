@@ -36,7 +36,6 @@ function asc_blog_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'calendar_entity';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
@@ -452,7 +451,6 @@ function asc_blog_views_default_views() {
   $handler->display->display_options['display_description'] = '7 Previous Posts';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_text'] = 'Archive';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/blog?offset=15';
@@ -554,24 +552,8 @@ function asc_blog_views_default_views() {
   $handler = $view->new_display('block', 'Blog Date Browser', 'blog_date_browser');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'calendar_style';
-  $handler->display->display_options['style_options']['name_size'] = '1';
-  $handler->display->display_options['style_options']['mini'] = '1';
-  $handler->display->display_options['style_options']['with_weekno'] = '0';
-  $handler->display->display_options['style_options']['multiday_theme'] = '1';
-  $handler->display->display_options['style_options']['theme_style'] = '1';
-  $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
-  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
-    'page' => '#ffffff',
-    'asc_blog' => '#ffffff',
-    'asc_event' => '#ffffff',
-    'asc_news' => '#ffffff',
-  );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'Blog Date Browser';
   $export['asc_blog'] = $view;

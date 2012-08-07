@@ -35,6 +35,13 @@ function asc_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_date';
+  $strongarm->value = 'm/d/Y';
+  $export['date_format_date'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__asc_blog';
   $strongarm->value = array(
     'view_modes' => array(
@@ -98,6 +105,34 @@ function asc_blog_strongarm() {
   $strongarm->name = 'node_submitted_asc_blog';
   $strongarm->value = 1;
   $export['node_submitted_asc_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_asc_blog_pattern';
+  $strongarm->value = 'blog/[node:title]';
+  $export['pathauto_node_asc_blog_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_blog_terms_1_pattern';
+  $strongarm->value = 'blog/[term:tid]';
+  $export['pathauto_taxonomy_term_blog_terms_1_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_blog_terms_2_pattern';
+  $strongarm->value = 'blog/[term:tid]';
+  $export['pathauto_taxonomy_term_blog_terms_2_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_blog_terms_3_pattern';
+  $strongarm->value = 'blog/[term:tid]';
+  $export['pathauto_taxonomy_term_blog_terms_3_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -63,7 +63,7 @@ function asc_blog_field_default_fields() {
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
-            'trim_length' => '600',
+            'trim_length' => '300',
           ),
           'type' => 'text_summary_or_trimmed',
           'weight' => '1',
@@ -87,6 +87,80 @@ function asc_blog_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_blog-field_ascblog_teaser'.
+  $fields['node-asc_blog-field_ascblog_teaser'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ascblog_teaser',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '300',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_blog',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Please note that the front page will only display 60 characters.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ascblog_teaser',
+      'label' => 'Teaser',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '30',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
       ),
     ),
   );
@@ -124,7 +198,7 @@ function asc_blog_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'asc_blog',
       'deleted' => '0',
-      'description' => 'Supply an image to accompany the blog entry.',
+      'description' => 'Supply an image to accompany the blog story.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -252,11 +326,10 @@ function asc_blog_field_default_fields() {
           'weight' => '4',
         ),
         'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
+          'label' => 'above',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
+          'type' => 'hidden',
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
@@ -324,11 +397,10 @@ function asc_blog_field_default_fields() {
           'weight' => '5',
         ),
         'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
+          'label' => 'above',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -396,11 +468,10 @@ function asc_blog_field_default_fields() {
           'weight' => '6',
         ),
         'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
+          'label' => 'above',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -422,12 +493,14 @@ function asc_blog_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Description');
+  t('Image');
   t('Blog Terms 1');
   t('Blog Terms 2');
   t('Blog Terms 3');
-  t('Description');
-  t('Image');
-  t('Supply an image to accompany the blog entry.');
+  t('Please note that the front page will only display 60 characters.');
+  t('Supply an image to accompany the blog story.');
+  t('Teaser');
 
   return $fields;
 }

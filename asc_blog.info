@@ -41,7 +41,6 @@ features[taxonomy][] = blog_terms_2
 features[taxonomy][] = blog_terms_3
 features[variable][] = block_titlelink_views_asc_blog-blog_block_large
 features[variable][] = block_titlelink_views_asc_blog-blog_block_small
-features[variable][] = date_format_date
 features[variable][] = field_bundle_settings_node__asc_blog
 features[variable][] = menu_options_asc_blog
 features[variable][] = menu_parent_asc_blog

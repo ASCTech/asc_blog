@@ -10,6 +10,28 @@
 function asc_blog_default_fe_block_settings() {
   $export = array();
 
+  $export['version'] = '1.0';
+
+  // Theme independent visibility settings.
+  $export['visibility'] = array(
+    'asc_taxonomy_filter-blog_terms_1' => array(
+      'delta' => 'blog_terms_1',
+      'module' => 'asc_taxonomy_filter',
+    ),
+    'menu_block-1' => array(
+      'delta' => '1',
+      'module' => 'menu_block',
+    ),
+    'views-asc_blog-blog_block_list' => array(
+      'delta' => 'asc_blog-blog_block_list',
+      'module' => 'views',
+    ),
+    'views-asc_blog-blog_block_small' => array(
+      'delta' => 'asc_blog-blog_block_small',
+      'module' => 'views',
+    ),
+  );
+
   // q7
   $theme = array();
 
@@ -18,54 +40,26 @@ function asc_blog_default_fe_block_settings() {
     'delta' => 'blog_terms_1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '-28',
-    'region' => 'content',
+    'weight' => '-19',
+    'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'blog',
+    'pages' => 'blog*',
     'title' => '',
     'cache' => '1',
   );
 
-  $theme['asc_taxonomy_filter-blog_terms_2'] = array(
-    'module' => 'asc_taxonomy_filter',
-    'delta' => 'blog_terms_2',
+  $theme['menu_block-1'] = array(
+    'module' => 'menu_block',
+    'delta' => '1',
     'theme' => 'q7',
     'status' => '1',
     'weight' => '0',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
-
-  $theme['asc_taxonomy_filter-blog_terms_3'] = array(
-    'module' => 'asc_taxonomy_filter',
-    'delta' => 'blog_terms_3',
-    'theme' => 'q7',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
-
-  $theme['views-asc_blog-blog_block_large'] = array(
-    'module' => 'views',
-    'delta' => 'asc_blog-blog_block_large',
-    'theme' => 'q7',
-    'status' => '1',
-    'weight' => '-21',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => '<front>',
-    'title' => '',
+    'pages' => 'blog*',
+    'title' => 'Useful Links',
     'cache' => -1,
   );
 
@@ -73,12 +67,12 @@ function asc_blog_default_fe_block_settings() {
     'module' => 'views',
     'delta' => 'asc_blog-blog_block_list',
     'theme' => 'q7',
-    'status' => 0,
-    'weight' => '-16',
-    'region' => '',
+    'status' => '1',
+    'weight' => '-20',
+    'region' => 'sidebar',
     'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
+    'visibility' => '1',
+    'pages' => 'blog*',
     'title' => '',
     'cache' => -1,
   );
@@ -88,8 +82,8 @@ function asc_blog_default_fe_block_settings() {
     'delta' => 'asc_blog-blog_block_small',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
-    'region' => 'postscript_second',
+    'weight' => '-15',
+    'region' => 'preface_second',
     'custom' => '0',
     'visibility' => '1',
     'pages' => '<front>',
@@ -97,13 +91,13 @@ function asc_blog_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $export['q7'] = $theme;
+  $export['theme']['q7'] = $theme;
 
   $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();
   foreach ($export as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
-      unset($export[$theme_key]);
+      unset($export['theme'][$theme_key]);
     }
   }
   return $export;

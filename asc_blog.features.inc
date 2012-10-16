@@ -45,7 +45,7 @@ function asc_blog_views_api() {
 function asc_blog_node_info() {
   $items = array(
     'asc_blog' => array(
-      'name' => t('Blog Story'),
+      'name' => t('Blog Entry'),
       'base' => 'node_content',
       'description' => t('Blog and updates for your organization.'),
       'has_title' => '1',

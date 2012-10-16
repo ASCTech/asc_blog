@@ -55,7 +55,11 @@ function asc_blog_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(),
     ),
   );
@@ -110,7 +114,7 @@ function asc_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_blog_terms_1_pattern';
-  $strongarm->value = 'blog/[term:tid]';
+  $strongarm->value = 'blog/filter/[term:tid]';
   $export['pathauto_taxonomy_term_blog_terms_1_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

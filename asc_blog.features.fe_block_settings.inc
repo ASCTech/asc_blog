@@ -41,7 +41,7 @@ function asc_blog_default_fe_block_settings() {
     'theme' => 'q7',
     'status' => '1',
     'weight' => '-19',
-    'region' => 'sidebar',
+    'region' => 'content',
     'custom' => '0',
     'visibility' => '1',
     'pages' => 'blog

@@ -18,6 +18,10 @@ function asc_blog_default_fe_block_settings() {
       'delta' => 'blog_terms_1',
       'module' => 'asc_taxonomy_filter',
     ),
+    'block-asc_blog_description' => array(
+      'machine_name' => 'asc_blog_description',
+      'module' => 'block',
+    ),
     'menu_block-1' => array(
       'delta' => '1',
       'module' => 'menu_block',
@@ -49,12 +53,26 @@ function asc_blog_default_fe_block_settings() {
     'cache' => '1',
   );
 
+  $theme['block-asc_blog_description'] = array(
+    'module' => 'block',
+    'theme' => 'q7',
+    'status' => '1',
+    'weight' => '-22',
+    'region' => 'sidebar',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'blog*',
+    'title' => '<none>',
+    'cache' => -1,
+    'machine_name' => 'asc_blog_description',
+  );
+
   $theme['menu_block-1'] = array(
     'module' => 'menu_block',
     'delta' => '1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
+    'weight' => '-20',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
@@ -68,11 +86,12 @@ function asc_blog_default_fe_block_settings() {
     'delta' => 'asc_blog-blog_block_list',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '-20',
+    'weight' => '-21',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'blog*',
+    'pages' => 'blog
+blog/filter*',
     'title' => '',
     'cache' => -1,
   );

@@ -22,10 +22,6 @@ function asc_blog_default_fe_block_settings() {
       'machine_name' => 'asc_blog_description',
       'module' => 'block',
     ),
-    'menu_block-1' => array(
-      'delta' => '1',
-      'module' => 'menu_block',
-    ),
     'views-asc_blog-blog_block_list' => array(
       'delta' => 'asc_blog-blog_block_list',
       'module' => 'views',
@@ -65,20 +61,6 @@ function asc_blog_default_fe_block_settings() {
     'title' => '<none>',
     'cache' => -1,
     'machine_name' => 'asc_blog_description',
-  );
-
-  $theme['menu_block-1'] = array(
-    'module' => 'menu_block',
-    'delta' => '1',
-    'theme' => 'q7',
-    'status' => '1',
-    'weight' => '-20',
-    'region' => 'sidebar',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => 'blog*',
-    'title' => 'Useful Links',
-    'cache' => -1,
   );
 
   $theme['views-asc_blog-blog_block_list'] = array(

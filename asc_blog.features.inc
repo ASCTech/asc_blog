@@ -40,6 +40,59 @@ function asc_blog_views_api() {
 }
 
 /**
+ * Implements hook_custom_breadcrumbs_config_features_default_settings().
+ */
+function asc_blog_custom_breadcrumbs_config_features_default_settings() {
+  $custom_breadcrumbs_configs = array();
+
+  $custom_breadcrumbs_configs[] = array(
+    'asc_blog-407855090' => array(
+      'name' => 'Blog',
+      'machine_name' => 'asc_blog-407855090',
+      'titles' => 'Blog
+[node:title]',
+      'paths' => 'blog
+[node:url:path]',
+      'visibility_php' => '',
+      'node_type' => 'asc_blog',
+      'language' => '',
+    ),
+  );
+  return $custom_breadcrumbs_configs;
+}
+
+/**
+ * Implements hook_custom_breadcrumbs_views_config_features_default_settings().
+ */
+function asc_blog_custom_breadcrumbs_views_config_features_default_settings() {
+  $custom_breadcrumbs_views_configs = array();
+
+  $custom_breadcrumbs_views_configs[] = array(
+    -1072821998 => array(
+      'name' => 'Blog',
+      'machine_name' => '-1072821998',
+      'titles' => 'Blog',
+      'paths' => 'blog',
+      'visibility_php' => '',
+      'views_path' => 'blog',
+      'language' => '',
+    ),
+  );
+  $custom_breadcrumbs_views_configs[] = array(
+    -31553374 => array(
+      'name' => 'Blog-View',
+      'machine_name' => '-31553374',
+      'titles' => 'Blog',
+      'paths' => 'blog',
+      'visibility_php' => '',
+      'views_path' => 'blog/filter/%',
+      'language' => '',
+    ),
+  );
+  return $custom_breadcrumbs_views_configs;
+}
+
+/**
  * Implements hook_node_info().
  */
 function asc_blog_node_info() {

@@ -24,17 +24,6 @@ function asc_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'block_titlelink_views_asc_blog-blog_block_small';
-  $strongarm->value = array(
-    'url' => 'blog',
-    'display' => 1,
-    'title' => 'Blog Page',
-  );
-  $export['block_titlelink_views_asc_blog-blog_block_small'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__asc_blog';
   $strongarm->value = array(
     'view_modes' => array(

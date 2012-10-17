@@ -44,7 +44,8 @@ function asc_blog_default_fe_block_settings() {
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'blog*',
+    'pages' => 'blog
+blog/filter*',
     'title' => '',
     'cache' => '1',
   );

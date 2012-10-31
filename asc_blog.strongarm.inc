@@ -110,14 +110,14 @@ function asc_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_blog_terms_2_pattern';
-  $strongarm->value = 'blog/[term:tid]';
+  $strongarm->value = 'blog/filter/[term:tid]';
   $export['pathauto_taxonomy_term_blog_terms_2_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_blog_terms_3_pattern';
-  $strongarm->value = 'blog/[term:tid]';
+  $strongarm->value = 'blog/filter/[term:tid]';
   $export['pathauto_taxonomy_term_blog_terms_3_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -157,7 +157,7 @@ function asc_blog_strongarm() {
     'type' => 'vocab',
     'xid' => 'blog_terms_3',
     'view_name' => 'asc_blog',
-    'display' => 'asc_events_page',
+    'display' => 'blog_page',
     'status' => 1,
   );
   $export['tvi_vocab_blog_terms_3'] = $strongarm;

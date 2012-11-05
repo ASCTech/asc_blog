@@ -76,6 +76,7 @@ function asc_blog_custom_breadcrumbs_views_config_features_default_settings() {
       'visibility_php' => '',
       'views_path' => 'blog',
       'language' => '',
+    ),
   );
   return $custom_breadcrumbs_views_configs;
 }

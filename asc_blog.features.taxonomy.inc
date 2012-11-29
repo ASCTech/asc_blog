@@ -10,7 +10,7 @@
 function asc_blog_taxonomy_default_vocabularies() {
   return array(
     'blog_terms_1' => array(
-      'name' => 'Category',
+      'name' => 'Blog Category',
       'machine_name' => 'blog_terms_1',
       'description' => 'Primary vocabulary for Blog',
       'hierarchy' => '0',

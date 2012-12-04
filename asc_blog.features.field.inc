@@ -140,12 +140,9 @@ function asc_blog_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'ds',
-          'settings' => array(
-            'taxonomy_term_link' => TRUE,
-            'taxonomy_term_separator' => ', ',
-          ),
-          'type' => 'ds_taxonomy_separator',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '1',
         ),
       ),

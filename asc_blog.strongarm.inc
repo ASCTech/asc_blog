@@ -13,6 +13,13 @@ function asc_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'asc_blog_name';
+  $strongarm->value = 'Blog';
+  $export['asc_blog_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'block_titlelink_views_asc_blog-blog_block_large';
   $strongarm->value = array(
     'url' => 'blog',

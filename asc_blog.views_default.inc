@@ -23,7 +23,7 @@ function asc_blog_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Blog';
-  $handler->display->display_options['css_class'] = 'features-list';
+  $handler->display->display_options['css_class'] = 'features-list features';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
@@ -99,6 +99,7 @@ function asc_blog_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'blog_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -198,6 +199,8 @@ function asc_blog_views_default_views() {
   $handler = $view->new_display('block', 'Recent Posts', 'blog_block_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Recent Posts';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'features-list';
   $handler->display->display_options['display_description'] = 'Blog list block for sidebar on blog page.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;

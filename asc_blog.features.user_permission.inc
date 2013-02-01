@@ -14,6 +14,7 @@ function asc_blog_user_default_permissions() {
   $permissions['create asc_blog content'] = array(
     'name' => 'create asc_blog content',
     'roles' => array(
+      'Content Editor' => 'Content Editor',
       'Content Manager' => 'Content Manager',
       'Site Administrator' => 'Site Administrator',
     ),
@@ -24,6 +25,7 @@ function asc_blog_user_default_permissions() {
   $permissions['delete any asc_blog content'] = array(
     'name' => 'delete any asc_blog content',
     'roles' => array(
+      'Content Editor' => 'Content Editor',
       'Content Manager' => 'Content Manager',
       'Site Administrator' => 'Site Administrator',
     ),
@@ -34,6 +36,7 @@ function asc_blog_user_default_permissions() {
   $permissions['delete own asc_blog content'] = array(
     'name' => 'delete own asc_blog content',
     'roles' => array(
+      'Content Editor' => 'Content Editor',
       'Content Manager' => 'Content Manager',
       'Site Administrator' => 'Site Administrator',
     ),
